@@ -8,6 +8,7 @@ BEGIN
     --Update the incremental column in the table
     Update water_table
     SET last_load = @lastload
+    COMMIT TRANSACTION;
     END;
 
 The last load date will be uploaded to the water_table -
